@@ -9,7 +9,7 @@ app.config['SECRET_KEY'] = 'super-secret'
 app.config['SECURITY_REGISTERABLE'] = True
 app.config['SECURITY_PASSWORD_HASH'] = "plaintext"
 
-app.debug = False
+app.debug = True
 db = SQLAlchemy(app)
 
 # Define models
