@@ -55,5 +55,18 @@ def post_user():
 	db.session.commit()
 	return redirect(url_for('index'))
 
+@app.route('/hakkimizda')
+def hakkimizda():
+    return render_template('hakkimizda.html')
+
+@app.route('/fotograflar')
+def fotograflar():
+    return render_template('fotograflar.html')
+
+@app.route('/iletisim')
+def iletisim():
+    return render_template('iletisim.html')
+
+
 if __name__ == "__main__":
 	app.run()
