@@ -4,7 +4,8 @@ from flask import request, redirect, url_for, render_template
 from flask.ext.security import Security, SQLAlchemyUserDatastore, UserMixin, RoleMixin, login_required
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:punto9950@localhost/flaskmovie'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:punto9950@localhost/flaskmovie'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://vualezzaatjntq:c37f1ba4e8a7b6c76bc3aad8cfc1defb011216987321a2aa6fb000d171a1f8ca@ec2-54-243-252-232.compute-1.amazonaws.com:5432/d64lbs258evp66'
 app.config['SECRET_KEY'] = 'super-secret'
 app.config['SECURITY_REGISTERABLE'] = True
 app.config['SECURITY_PASSWORD_HASH'] = "sha512_crypt"
