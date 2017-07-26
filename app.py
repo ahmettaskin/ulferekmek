@@ -7,9 +7,16 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:punto9950@localhost/flaskmovie'
 app.config['SECRET_KEY'] = 'super-secret'
 app.config['SECURITY_REGISTERABLE'] = True
-app.config['SECURITY_PASSWORD_HASH'] = "plaintext"
+app.config['SECURITY_PASSWORD_HASH'] = "sha512_crypt"
+app.config['SECURITY_PASSWORD_SALT'] = "ulferekmek"
+app.config['SECURITY_CONFIRMABLE'] = False
+app.config['SECURITY_SEND_REGISTER_EMAIL'] = False
+
 
 app.debug = True
+
+
+
 db = SQLAlchemy(app)
 
 # Define models
